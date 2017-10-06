@@ -11,6 +11,15 @@ public class Funcionario {
 	private  Date dataNascimento;
 	private String nomeArtistico;
 	private String funcao;
+	private String nomeReal;
+	
+	
+	public String getNomeReal() {
+		return nomeReal;
+	}
+	public void setNomeReal(String nomeReal) {
+		this.nomeReal = nomeReal;
+	}
 	public Long getCodigo() {
 		return codigo;
 	}

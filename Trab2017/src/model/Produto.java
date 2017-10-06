@@ -2,11 +2,20 @@ package model;
 
 public class Produto {
 	
+	private Long codigo;
 	private String nome;
 	private String gtin;
 	private String Marca;
 	private String conteudo;
 	private Float valor;
+	
+	public Long getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
+	}
+	
 	public String getNome() {
 		return nome;
 	}

@@ -6,20 +6,26 @@ public class Pedido {
 
 	private Integer codigo;
 	private LocalDate data;
-	private String nome;
-	
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public Pedido(){
+	private Cliente cliente;
+	private Double valorTotal;
 		
-	}
 	
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public Double getValorTotal() {
+		return valorTotal;
+	}
+
+	public void setValorTotal(Double valorTotal) {
+		this.valorTotal = valorTotal;
+	}
+
 	public Pedido(Integer codigo){
 		this.codigo = codigo;
 	}

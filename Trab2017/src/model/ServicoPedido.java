@@ -8,6 +8,7 @@ public class ServicoPedido {
 	private Double qtd;
 	private Double valorUnitario;
 	private Double valorTotal;
+	
 	public Integer getCodigo() {
 		return codigo;
 	}

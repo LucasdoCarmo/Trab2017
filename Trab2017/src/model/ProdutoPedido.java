@@ -1,6 +1,6 @@
 package model;
 
-public class ItemPedido {
+public class ProdutoPedido {
 
 	
 		private Integer codigo;

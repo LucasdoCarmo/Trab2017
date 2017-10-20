@@ -9,6 +9,8 @@ import lombok.Getter;
 
 public class Main extends Application {
 
+	// não tem nada aqui!!!!!!!!!!!
+			
 	public static final String PATH_VIEW = "../telas/";
 	
 	@Getter

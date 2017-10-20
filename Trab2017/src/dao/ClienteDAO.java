@@ -1,5 +1,7 @@
 package dao;
 
-public interface ClienteDAO  {
+import model.Cliente;
+
+public interface ClienteDAO  extends CrudDao<Cliente> {
 
 }

@@ -88,7 +88,7 @@ public class UsuarioJDBC implements UsuarioDAO {
 			ps.setLong(1, codigo);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				usuario = getUsuario(rs);
+	//			usuario = getUsuario(rs);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -103,18 +103,18 @@ public class UsuarioJDBC implements UsuarioDAO {
 	private List<Usuario> getLista(ResultSet rs) throws SQLException {
 		List<Usuario> usuarios = new ArrayList<>();
 		while (rs.next()) {
-			usuarios.add(getUsuario(rs));
+			//usuarios.add(getUsuario(rs));
 		}
 		return usuarios;
 	}
 
-	private Usuario getUsuario(ResultSet rs) throws SQLException {
-		Usuario usuario = new Usuario(rs.getLong("idUsuario"), rs.getString("Nome"), rs.getString("senha"));
-		return usuario;
+//	private Usuario getUsuario(ResultSet rs) throws SQLException {
+		//Usuario usuario = new Usuario(rs.getLong("idUsuario"), rs.getString("Nome"), rs.getString("senha"));
+	//	return usuario;
 
-	}
+	//}
 
-	public Usuario login(String login, String senha) throws SQLException {
+/*	public Usuario login(String login, String senha) throws SQLException {
 		Usuario usuario = null;
 		String sql = "SELECT * FROM usuario WHERE Nome=? AND senha=?";
 		PreparedStatement ps = conexao.get().prepareStatement(sql);
@@ -125,7 +125,7 @@ public class UsuarioJDBC implements UsuarioDAO {
 			usuario = new Usuario(rs.getLong("isUsuario"), rs.getString("Nome"), rs.getString("senha"));
 		}
 		return usuario;
-	}
+	}   */
 
 	@Override
 	public Usuario getIDPorNome(String nome) {
@@ -138,7 +138,7 @@ public class UsuarioJDBC implements UsuarioDAO {
 			ResultSet rs = ps.executeQuery();
 			// ps.getGeneratedKeys();
 			while (rs.next()) {
-				usuario = ((UsuarioJDBC) rs).getUsuario(rs);
+		//		usuario = ((UsuarioJDBC) rs).getUsuario(rs);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -148,5 +148,11 @@ public class UsuarioJDBC implements UsuarioDAO {
 		}
 		return usuario;
 	}
+
+@Override
+public List<Usuario> listar() {
+	// TODO Auto-generated method stub
+	return null;
+}
 
 }

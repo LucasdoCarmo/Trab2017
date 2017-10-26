@@ -4,14 +4,13 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import lombok.Getter;
 
 public class Main extends Application {
 
-	// não tem nada aqui!!!!!!!!!!!
-			
-	public static final String PATH_VIEW = "../telas/";
+	public static final String PATH_VIEW = "/telas/";
 	
 	@Getter
 	private static AnchorPane rootLayout;
@@ -22,16 +21,16 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			Main.primaryStage = primaryStage;
-			Main.rootLayout = (AnchorPane) FXMLLoader.load(getClass().getResource(PATH_VIEW + "Login.fxml"));
+			Main.rootLayout = (AnchorPane) FXMLLoader.load(getClass().getResource(PATH_VIEW + "Principal.fxml"));
 
-			primaryStage.setTitle("Trab2017");
+			primaryStage.setTitle("23");
 			Scene scene = new Scene(rootLayout);
-			scene.getStylesheets().add("/css/style.css");
+			// scene.getStylesheets().add("/css/style.css");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 
 		} catch (Exception e) {
-			e.printStackTrace(); 
+			e.printStackTrace();
 		}
 	}
 

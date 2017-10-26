@@ -1,7 +1,8 @@
 package dao;
 
-
-
+import conexao.Conexao;
+import conexao.ConexaoProducao;
+import conexao.ConexaoTeste;
 
 public class DaoFactory {
 
@@ -18,7 +19,9 @@ public class DaoFactory {
 		}
 		return daoFactory;
 	}
-	public  UfDao ufDao(){
-		return new UfJdbc(new ConexaoProducao());
+	
+	public UsuarioDAO usuarioDAO() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

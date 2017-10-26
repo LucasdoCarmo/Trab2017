@@ -15,7 +15,7 @@ public class ConexaoProducao implements Conexao{
 	private static void open(){
 		
 		String url = System.getProperty("url_test");
-		String username = System.getProperty("url_test");
+		String username = System.getProperty("user_test");
 		String password = "";
 		// Vai até o banco de dados e cria uma conexão.
 		try {

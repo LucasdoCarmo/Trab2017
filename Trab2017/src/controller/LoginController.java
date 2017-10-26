@@ -7,7 +7,7 @@ import java.sql.Statement;
 import application.Main;
 import componente.Alerta;
 import conexao.Conexao;
-import conexao.ConexaoMysqlProducao;
+
 import dao.UsuarioDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -53,13 +53,13 @@ public class LoginController {
 
 	public LoginController() {
 		usuarioDAO = dao.DaoFactory.get().usuarioDAO();
-		//log = new ConexaoMysqlProducao();
+		log = new ConexaoProducao();
 	}
 
-	@FXML
+/*	@FXML
 	void CriarConta(ActionEvent event) {
 		AbreTela("CadastraUsuario.fxml");
-	}
+	} */
 
 	@FXML
 	void Entrar(ActionEvent event) throws SQLException {
@@ -68,34 +68,34 @@ public class LoginController {
 			Connection connection = log.get();
 			Statement stmt = connection.createStatement();
 			ResultSet rs = stmt.executeQuery("select Nome, senha from Usuario");
-			/*if (tfLogin.getText().equals("") || (tfSenha.getText().equals(""))) {
+			if (tfLogin.getText().equals("") || (tfSenha.getText().equals(""))) {
 				Alerta alerta = new Alerta();
 				alerta.nulo();
 				return;
-			}*/
-			/*while (rs.next()) {
+			}
+			while (rs.next()) {
 				if (tfLogin.getText().equals(rs.getString("Nome"))
 						&& (tfSenha.getText().equals(rs.getString("senha")))) {
 					Alerta alerta1 = new Alerta();
 					alerta1.entrar();
 
-					AbreTela("Principal.fxml");
+//					AbreTela("Principal.fxml");
 					logado = true;
 				}
 				return;
-			}*/
-			//Alerta alerta1 = new Alerta();
-			//alerta1.incorreto();
+			}
+			Alerta alerta1 = new Alerta();
+			alerta1.incorreto();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
 	}
 
-	@FXML
+/*	@FXML
 	void EsqueciSenha(ActionEvent event) {
 		AbreTela("EditaPerfil.fxml");
-	}
+	}*/
 
 	
 	//Metodo de abrir tela que fecha tela antiga e cria nova

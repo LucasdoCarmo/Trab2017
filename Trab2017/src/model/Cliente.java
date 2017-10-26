@@ -7,7 +7,7 @@ public class Cliente {
 	
 	private Long codigo;
 	private int  Cpf;
-	private  Date dataNascimento;
+	private  String dataNascimento;
 	private String nome;
 	public Long getCodigo() {
 		return codigo;
@@ -21,10 +21,10 @@ public class Cliente {
 	public void setCpf(int cpf) {
 		Cpf = cpf;
 	}
-	public Date getDataNascimento() {
+	public String getDataNascimento() {
 		return dataNascimento;
 	}
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	public String getNome() {

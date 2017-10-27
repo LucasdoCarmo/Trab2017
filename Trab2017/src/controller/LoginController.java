@@ -4,10 +4,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
 import application.Main;
 import componente.Alerta;
 import conexao.Conexao;
-
+import conexao.ConexaoProducao;
 import dao.UsuarioDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,9 +38,7 @@ public class LoginController {
 	@FXML
 	private TextField tfLogin;
 
-	@FXML
-	private RadioButton rbLembarSenha;
-
+	
 	@FXML
 	private Hyperlink linkEsqueciSenha;
 
@@ -56,11 +55,10 @@ public class LoginController {
 		log = new ConexaoProducao();
 	}
 
-/*	@FXML
+	@FXML
 	void CriarConta(ActionEvent event) {
 		AbreTela("CadastraUsuario.fxml");
-	} */
-
+	} 
 	@FXML
 	void Entrar(ActionEvent event) throws SQLException {
 
@@ -79,7 +77,7 @@ public class LoginController {
 					Alerta alerta1 = new Alerta();
 					alerta1.entrar();
 
-//					AbreTela("Principal.fxml");
+					AbreTela("Principal.fxml");
 					logado = true;
 				}
 				return;
@@ -92,10 +90,10 @@ public class LoginController {
 
 	}
 
-/*	@FXML
+	@FXML
 	void EsqueciSenha(ActionEvent event) {
 		AbreTela("EditaPerfil.fxml");
-	}*/
+	}
 
 	
 	//Metodo de abrir tela que fecha tela antiga e cria nova

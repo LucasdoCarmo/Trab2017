@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import lombok.Getter;
 
@@ -21,11 +20,11 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			Main.primaryStage = primaryStage;
-			Main.rootLayout = (AnchorPane) FXMLLoader.load(getClass().getResource(PATH_VIEW + "Principal.fxml"));
+			Main.rootLayout = (AnchorPane) FXMLLoader.load(getClass().getResource(PATH_VIEW + "Tela1.fxml"));
 
 			primaryStage.setTitle("23");
 			Scene scene = new Scene(rootLayout);
-			// scene.getStylesheets().add("/css/style.css");
+			scene.getStylesheets().add("/css/style.css");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 

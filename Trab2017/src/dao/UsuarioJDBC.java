@@ -103,18 +103,18 @@ public class UsuarioJDBC implements UsuarioDAO {
 	private List<Usuario> getLista(ResultSet rs) throws SQLException {
 		List<Usuario> usuarios = new ArrayList<>();
 		while (rs.next()) {
-			//usuarios.add(getUsuario(rs));
+			usuarios.add(getUsuario(rs));
 		}
 		return usuarios;
 	}
 
-//	private Usuario getUsuario(ResultSet rs) throws SQLException {
-		//Usuario usuario = new Usuario(rs.getLong("idUsuario"), rs.getString("Nome"), rs.getString("senha"));
-	//	return usuario;
+	private Usuario getUsuario(ResultSet rs) throws SQLException {
+		Usuario usuario = new Usuario(rs.getLong("idUsuario"), rs.getString("Nome"), rs.getString("senha"));
+		return usuario;
 
-	//}
+	}
 
-/*	public Usuario login(String login, String senha) throws SQLException {
+	public Usuario login(String login, String senha) throws SQLException {
 		Usuario usuario = null;
 		String sql = "SELECT * FROM usuario WHERE Nome=? AND senha=?";
 		PreparedStatement ps = conexao.get().prepareStatement(sql);
@@ -122,10 +122,10 @@ public class UsuarioJDBC implements UsuarioDAO {
 		ps.setObject(2, senha);
 		ResultSet rs = ps.executeQuery();
 		if (rs.next()) {
-			usuario = new Usuario(rs.getLong("isUsuario"), rs.getString("Nome"), rs.getString("senha"));
+			usuario = new Usuario(rs.getLong("idUsuario"), rs.getString("Nome"), rs.getString("senha"));
 		}
 		return usuario;
-	}   */
+	}   
 
 	@Override
 	public Usuario getIDPorNome(String nome) {

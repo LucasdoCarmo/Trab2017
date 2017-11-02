@@ -14,6 +14,20 @@ public class Usuario {
 	private String senha;
 	
 	
+	public Usuario(Long codigo, String nome, String senha) {
+		super();
+		this.codigo = codigo;
+		this.nome = nome;
+		this.senha = senha;
+	}
+
+
+	public Usuario() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public Long getCodigo() {
 		return codigo;
 	}

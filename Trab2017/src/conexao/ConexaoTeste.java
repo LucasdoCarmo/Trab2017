@@ -13,9 +13,9 @@ public class ConexaoTeste implements Conexao{
 	}
 	
 	private static void open(){
-		String url = "jdbc:mysql://localhost:3306/jdbc";
-		String username = "root";
-		String password = "123456789";
+		String url = System.getProperty("url_teste");
+		String username = System.getProperty("username_teste");
+		String password = System.getProperty("password_teste");
 		// Vai até o banco de dados e cria uma conexão.
 		try {
 			con = DriverManager.getConnection(url,

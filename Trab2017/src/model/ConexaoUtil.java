@@ -15,10 +15,10 @@ public class ConexaoUtil {
 	}
 
 	public static void open() { // abrindo a conexao
-		String url = "root:mysql://localhost:3306/tgp"; // caminho q o jdbc //
+		String url = System.getProperty("url"); // caminho q o jdbc //
 															// espera
-		String username = "root";
-		String password = "";
+		String username = System.getProperty("username");
+		String password = System.getProperty("password");
 
 		// vai até o banco de dados e cria uma conexão
 		try {

@@ -20,7 +20,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			Main.primaryStage = primaryStage;
-			Main.rootLayout = (AnchorPane) FXMLLoader.load(getClass().getResource(PATH_VIEW + "Principal.fxml"));
+			Main.rootLayout = (AnchorPane) FXMLLoader.load(getClass().getResource(PATH_VIEW + "Tela1.fxml"));
 
 			primaryStage.setTitle("23");
 			Scene scene = new Scene(rootLayout);
@@ -32,7 +32,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-//asdasd
+
 	public static void main(String[] args) {
 		launch(args);
 	}

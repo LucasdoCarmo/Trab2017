@@ -19,7 +19,7 @@ public class UsuarioJDBC implements UsuarioDAO {
 	}
 
 	public void inserir(Usuario objeto) {
-		String insert = "insert into usuario (Nome,senha) values(?,?)";
+		String insert = "insert into usuario (nome,senha) values(?,?)";
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(insert, Statement.RETURN_GENERATED_KEYS);
 			ps.setString(1, objeto.getNome());
@@ -88,7 +88,7 @@ public class UsuarioJDBC implements UsuarioDAO {
 			ps.setLong(1, codigo);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-	//			usuario = getUsuario(rs);
+				usuario = getUsuario(rs);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -64,7 +64,7 @@ public class LoginController {
 		try {
 			Connection connection = log.get();
 			Statement stmt = connection.createStatement();
-			ResultSet rs = stmt.executeQuery("select Nome, senha from Usuario");
+			ResultSet rs = stmt.executeQuery("select Nome, senha from usuario");
 			if (tfLogin.getText().equals("") || (tfSenha.getText().equals(""))) {
 				Alerta alerta = new Alerta();
 				alerta.nulo();

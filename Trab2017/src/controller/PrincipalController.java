@@ -33,7 +33,7 @@ public class PrincipalController {
 		private StackPane stack;
 	    
 	    @FXML
-		void CadastroCliente(ActionEvent event) {
+		void onCliente(ActionEvent event) {
 			AbreTela("CadastroCliente.fxml");
 		} 
 	    

@@ -56,7 +56,7 @@ public class LoginController {
 
 	@FXML
 	void CriarConta(ActionEvent event) {
-		AbreTela("CadastraUsuario.fxml");
+		AbreTela("Principal.fxml");
 	} 
 	@FXML
 	void Entrar(ActionEvent event) throws SQLException {

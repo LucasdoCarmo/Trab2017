@@ -67,7 +67,7 @@ public class LoginController {
 			ResultSet rs = stmt.executeQuery("select Nome, senha from usuario");
 			if (tfLogin.getText().equals("") || (tfSenha.getText().equals(""))) {
 				Alerta alerta = new Alerta();
-				alerta.nulo();
+				alerta.nulo();//
 				return;
 			}
 			while (rs.next()) {

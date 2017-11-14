@@ -1,11 +1,14 @@
 package controller;
 
+import java.io.IOException;
+
 import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 
@@ -34,12 +37,12 @@ public class PrincipalController {
 	    
 	    @FXML
 		void onCliente(ActionEvent event) {
-			AbreTela("CadastroCliente.fxml");
-		} 
+	    //	AbreTela("Cliente.fxml");
+	    }
 	    
 	    
 	    
-	    
+	  
 	    public void AbreTela(String tela) {
 			stack.getChildren().clear();
 			stack.getChildren().add(getNode(tela));

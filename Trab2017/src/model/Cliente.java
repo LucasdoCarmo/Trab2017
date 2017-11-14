@@ -1,8 +1,5 @@
 package model;
 
-import java.math.BigInteger;
-import java.sql.Date;
-
 public class Cliente {
 	
 	private Long codigo;

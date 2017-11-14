@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+   <children>
+      <BorderPane fx:id="bpPrincipal" prefHeight="827.0" prefWidth="907.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Cadastro">
+                     <items>
+                        <MenuItem fx:id="miCliente" mnemonicParsing="false" onAction="#onCliente" text="Cliente" />
+                        <MenuItem fx:id="miFuncionario" mnemonicParsing="false" text="Funcionario" />
+                        <MenuItem fx:id="miProduto" mnemonicParsing="false" text="Produto" />
+                        <MenuItem fx:id="miServico" mnemonicParsing="false" text="Serviço" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Pedido">
+                     <items>
+                        <MenuItem fx:id="miPCadastro" mnemonicParsing="false" text="Cadastro" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <Pane prefHeight="700.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField layoutX="220.0" layoutY="159.0" prefHeight="31.0" prefWidth="234.0" />
+                  <TextField layoutX="220.0" layoutY="197.0" prefHeight="31.0" prefWidth="234.0" />
+                  <Text layoutX="184.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" wrappingWidth="50.1337890625" />
+                  <Text layoutX="160.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" wrappingWidth="47.1337890625" />
+                  <Text layoutX="301.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gtin:" wrappingWidth="61.1337890625" />
+                  <TextField layoutX="344.0" layoutY="122.0" prefHeight="31.0" prefWidth="110.0" />
+                  <Button layoutX="154.0" layoutY="362.0" mnemonicParsing="false" text="Salvar" />
+                  <Button layoutX="281.0" layoutY="362.0" mnemonicParsing="false" text="Excluir" />
+                  <Button layoutX="385.0" layoutY="362.0" mnemonicParsing="false" text="Cancelar" />
+                  <TextField layoutX="220.0" layoutY="122.0" prefHeight="31.0" prefWidth="73.0" />
+                  <Text layoutX="160.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marca:" wrappingWidth="63.1337890625" />
+                  <Text layoutX="126.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conteúdo:" wrappingWidth="95.1337890625" />
+                  <Text layoutX="149.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor:" wrappingWidth="70.1337890625" />
+                  <TextField layoutX="220.0" layoutY="276.0" prefHeight="31.0" prefWidth="74.0" />
+                  <CheckBox layoutX="221.0" layoutY="240.0" mnemonicParsing="false" text="KG" />
+                  <CheckBox layoutX="343.0" layoutY="240.0" mnemonicParsing="false" text="UND" />
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

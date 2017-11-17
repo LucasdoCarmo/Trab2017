@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -7,37 +14,40 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrincipalController">
    <children>
-      <BorderPane fx:id="bpPrincipal" layoutY="6.0" prefHeight="800.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <top>
-            <MenuBar layoutX="800.0" layoutY="800.0" prefHeight="12.0" prefWidth="802.0" BorderPane.alignment="CENTER">
-               <menus>
-                  <Menu mnemonicParsing="false" text="Cadastro">
-                     <items>
-                        <MenuItem fx:id="miCliente" mnemonicParsing="false" onAction="#onCliente" text="Cliente" />
-                        <MenuItem fx:id="miFuncionario" mnemonicParsing="false" text="Funcionario" />
-                        <MenuItem fx:id="miProduto" mnemonicParsing="false" text="Produto" />
-                        <MenuItem fx:id="miServico" mnemonicParsing="false" text="Serviço" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Pedido">
-                     <items>
-                        <MenuItem fx:id="miPCadastro" mnemonicParsing="false" text="Cadastro" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Help">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-               </menus>
-               <BorderPane.margin>
-                  <Insets />
-               </BorderPane.margin>
-            </MenuBar>
-         </top>
-      </BorderPane>
+      <StackPane fx:id="stack1" layoutX="10.0" layoutY="10.0" prefHeight="594.0" prefWidth="1185.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane fx:id="Tela2" prefHeight="800.0" prefWidth="800.0" styleClass="root">
+               <top>
+                  <MenuBar prefHeight="12.0" prefWidth="802.0" BorderPane.alignment="CENTER">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="Cadastro">
+                           <items>
+                              <MenuItem fx:id="miCliente" mnemonicParsing="false" onAction="#onCliente" text="Cliente" />
+                              <MenuItem fx:id="miFuncionario" mnemonicParsing="false" text="Funcionario" />
+                              <MenuItem fx:id="miProduto" mnemonicParsing="false" text="Produto" />
+                              <MenuItem fx:id="miServico" mnemonicParsing="false" text="Serviço" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Pedido">
+                           <items>
+                              <MenuItem fx:id="miPCadastro" mnemonicParsing="false" text="Cadastro" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="About" />
+                           </items>
+                        </Menu>
+                     </menus>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </MenuBar>
+               </top>
+            </BorderPane>
+         </children>
+      </StackPane>
    </children>
 </AnchorPane>

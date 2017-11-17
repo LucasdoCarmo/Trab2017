@@ -35,6 +35,7 @@ public class PrincipalController {
 	    @FXML
 		private StackPane stack;
 	    
+	    
 	    @FXML
 		void onCliente(ActionEvent event) {
 	    //	AbreTela("Cliente.fxml");

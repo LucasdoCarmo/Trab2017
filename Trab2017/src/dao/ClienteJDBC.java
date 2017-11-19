@@ -6,11 +6,44 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
+
+import br.edu.unoesc.revisaoOO.modelo.Agencia;
+import br.edu.unoesc.revisaoOO.modelo.ConexaoUtil;
 import model.Cliente;
 
-public class ClienteJDBC implements ClienteDAO{
+public class ClienteJDBC implements ClienteDAO {
 
+	
+	@Override
+	public List<Cliente> listar1() {
+		List<Cliente> clientes = new ArrayList<>();
+
+		try {
+
+			Connection con = ConexaoUtil.getCon();
+			Statement stmt = con.createStatement();
+			String sql = "select * from cliente";
+			ResultSet rs = stmt.executeQuery(sql);
+			
+			while (rs.next()) {
+				Cliente cliente = new Cliente();
+				cliente.setCodigo(rs.getLong("codigo"));
+				cliente.setNome(rs.getString("nome"));
+				cliente.setCpf(rs.getString("cpf"));
+
+				cliente.setDataNascimento(rs.getDate("data").toLocalDate());
+				clientes.add(cliente);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+
+		}
+		return clientes;
+	}	
+	
 	@Override
 	public void inserir(Cliente cliente) {
 		// TODO Auto-generated method stub
@@ -35,13 +68,13 @@ public class ClienteJDBC implements ClienteDAO{
 	@Override
 	public void alterar(Cliente entidade) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void excluir(Long codigo) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

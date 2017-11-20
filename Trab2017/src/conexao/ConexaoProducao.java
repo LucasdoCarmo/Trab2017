@@ -17,7 +17,6 @@ public class ConexaoProducao implements Conexao{
 		String url = System.getProperty("url");
 		String username = System.getProperty("username");
 		String password = System.getProperty("password");
-		// Vai até o banco de dados e cria uma conexão.
 		try {
 			con = DriverManager.getConnection(url,
 					username, password);

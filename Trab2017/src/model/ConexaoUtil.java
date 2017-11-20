@@ -8,29 +8,24 @@ public class ConexaoUtil {
 
 	private static Connection con;
 
-	static { // é um bloco statico executa quando chamar qualquer metodo dessa
-		// classe, faz isso só uma vez e guarda na variavel conection q depois
-		// retorna no fim
+	static { 
 		open();
 	}
 
-	public static void open() { // abrindo a conexao
-		String url = System.getProperty("url"); // caminho q o jdbc //
-															// espera
+	public static void open() { 
+		String url = System.getProperty("url"); 
 		String username = System.getProperty("username");
 		String password = System.getProperty("password");
 
-		// vai até o banco de dados e cria uma conexão
 		try {
-			con = DriverManager.getConnection(url, username, password); // pega
-																		// conexao
+			con = DriverManager.getConnection(url, username, password); 
 		} catch (SQLException ex) {
 			ex.printStackTrace();
 		}
 
 	}
 
-	public static Connection getCon() { //
+	public static Connection getCon() { 
 		try {
 			if (con.isClosed()) {
 				open();

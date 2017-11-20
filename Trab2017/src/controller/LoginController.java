@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import application.Main;
 import componente.Alerta;
 import conexao.Conexao;
 import conexao.ConexaoProducao;
@@ -20,7 +19,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -61,22 +59,18 @@ public class LoginController {
 	@FXML
 	void CriarConta(ActionEvent event) {
 		//AbreTela("Principal.fxml");
-		/*FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("Produto.fxml"));
+		Node node = (Node) event.getSource();
+		Stage stage = (Stage) node.getScene().getWindow();
+		Parent root = null;
 		try {
-			AnchorPane ProdutoView = (AnchorPane) loader.load();
-			bpPrincipal.setCenter(ProdutoView);
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}*/
-		/*LoginController p = new LoginController();
-		 
-		try {
-			BorderPane ProdutoView = (BorderPane) loader.load();
-			bpPrincipal.setCenter(ProdutoView);
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}*/
+			root = FXMLLoader.load(getClass().getResource("Principal.fxml"));
+			
+		} catch (IOException ex) {
+		}
+		Scene scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+		
 		
 	}
 	@FXML
@@ -122,11 +116,12 @@ public class LoginController {
 
 	@FXML
 	void EsqueciSenha(ActionEvent event) {
-		AbreTela("EditaPerfil.fxml");
+		//AbreTela("EditaPerfil.fxml");
 	}
 
+	//Esquece isso fazer funcionar td depois se der tudo certo tentar fazer deste modo
 	
-	//Metodo de abrir tela que fecha tela antiga e cria nova
+	/*Metodo de abrir tela que fecha tela antiga e cria nova
 	public void AbreTela(String tela) {
 	//	stack.getChildren().clear();
 		//stack.getChildren().add(getNode(tela));
@@ -141,6 +136,6 @@ public class LoginController {
 		}
 		return no;
 
-	}
+	}*/
 
 }

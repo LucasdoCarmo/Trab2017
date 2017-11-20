@@ -40,10 +40,14 @@ public class PrincipalController {
 
     }
 	    
+	 
+    
+    
+    
+    
 	    
-	    
-	  
-	    public void AbreTela(String tela) {
+	  //esquece e tentar fazer depois
+	    /*public void AbreTela(String tela) {
 			stack1.getChildren().clear();
 			stack1.getChildren().add(getNode(tela));
 		}
@@ -56,7 +60,7 @@ public class PrincipalController {
 			}
 			return no;
 
-		}
+		}*/
 	}
 
 

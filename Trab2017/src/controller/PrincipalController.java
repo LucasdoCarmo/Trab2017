@@ -13,40 +13,39 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 
 public class PrincipalController {
-	
-	    @FXML
-	    private MenuItem miPCadastro;
 
-	    @FXML
-	    private MenuItem miProduto;
+    @FXML
+    private BorderPane Tela2;
 
-	    @FXML
-	    private MenuItem miServico;
+    @FXML
+    private MenuItem miPCadastro;
 
-	    @FXML
-	    private MenuItem miCliente;
+    @FXML
+    private StackPane stack1;
 
-	    @FXML
-	    private BorderPane bpPrincipal;
+    @FXML
+    private MenuItem miProduto;
 
-	    @FXML
-	    private MenuItem miFuncionario;
-	   
-	    @FXML
-		private StackPane stack;
-	    
-	    
-	    @FXML
-		void onCliente(ActionEvent event) {
-	    //	AbreTela("Cliente.fxml");
-	    }
+    @FXML
+    private MenuItem miServico;
+
+    @FXML
+    private MenuItem miCliente;
+
+    @FXML
+    private MenuItem miFuncionario;
+
+    @FXML
+    void onCliente(ActionEvent event) {
+
+    }
 	    
 	    
 	    
 	  
 	    public void AbreTela(String tela) {
-			stack.getChildren().clear();
-			stack.getChildren().add(getNode(tela));
+			stack1.getChildren().clear();
+			stack1.getChildren().add(getNode(tela));
 		}
 
 		public Node getNode(String node) {

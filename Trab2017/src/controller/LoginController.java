@@ -71,6 +71,7 @@ public class LoginController {
 		stage.setScene(scene);
 		stage.show();
 		
+		
 	}
 	@FXML
 	void Entrar(ActionEvent event) throws SQLException {

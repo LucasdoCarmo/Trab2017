@@ -17,7 +17,7 @@ public class ClienteJDBC implements ClienteDAO {
 
 	
 	@Override
-	public List<Cliente> listar1() {
+	public List<Cliente> listar() {
 		List<Cliente> clientes = new ArrayList<>();
 
 		try {
@@ -77,11 +77,7 @@ public class ClienteJDBC implements ClienteDAO {
 
 	}
 
-	@Override
-	public List<Cliente> listar() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 
 	@Override
 	public Cliente get(Long codigo) {

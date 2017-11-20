@@ -15,39 +15,40 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
 public class LoginController {
 
-	@FXML
-	private StackPane stack;
+    @FXML
+    private TextField tfSenha;
 
-	@FXML
-	private BorderPane panelPrincipal;
+    @FXML
+    private Button btnCriarConta;
 
-	@FXML
-	private TextField tfSenha;
+    @FXML
+    private TextField tfLogin;
 
-	@FXML
-	private Button btnCriarConta;
+    @FXML
+    private Hyperlink linkEsqueciSenha;
 
-	@FXML
-	private TextField tfLogin;
+    @FXML
+    private BorderPane bpPrincipal;
 
-	
-	@FXML
-	private Hyperlink linkEsqueciSenha;
-
-	@FXML
-	private Button btnEntrar;
+    @FXML
+    private Button btnEntrar;
 	private Conexao log;
 
+	public static final String PATH_VIEW = "/telas/";
+	
+	
+	
 	public boolean logado = false;
 	
 	private UsuarioDAO usuarioDAO;
@@ -59,8 +60,25 @@ public class LoginController {
 
 	@FXML
 	void CriarConta(ActionEvent event) {
-		AbreTela("Principal.fxml");
-	} 
+		//AbreTela("Principal.fxml");
+		/*FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource("Produto.fxml"));
+		try {
+			AnchorPane ProdutoView = (AnchorPane) loader.load();
+			bpPrincipal.setCenter(ProdutoView);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}*/
+		/*LoginController p = new LoginController();
+		 
+		try {
+			BorderPane ProdutoView = (BorderPane) loader.load();
+			bpPrincipal.setCenter(ProdutoView);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}*/
+		
+	}
 	@FXML
 	void Entrar(ActionEvent event) throws SQLException {
 
@@ -78,7 +96,18 @@ public class LoginController {
 						&& (tfSenha.getText().equals(rs.getString("senha")))) {
 					Alerta alerta1 = new Alerta();
 					alerta1.entrar();
-					AbreTela("Principal.fxml");
+					//AbreTela("Principal.fxml");
+					Node node = (Node) event.getSource();
+					Stage stage = (Stage) node.getScene().getWindow();
+					Parent root = null;
+					try {
+						root = FXMLLoader.load(getClass().getResource("Principal.fxml"));
+						
+					} catch (IOException ex) {
+					}
+					Scene scene = new Scene(root);
+					stage.setScene(scene);
+					stage.show();
 					logado = true;
 				}
 				return;
@@ -99,8 +128,9 @@ public class LoginController {
 	
 	//Metodo de abrir tela que fecha tela antiga e cria nova
 	public void AbreTela(String tela) {
-		stack.getChildren().clear();
-		stack.getChildren().add(getNode(tela));
+	//	stack.getChildren().clear();
+		//stack.getChildren().add(getNode(tela));
+		
 	}
 
 	public Node getNode(String node) {

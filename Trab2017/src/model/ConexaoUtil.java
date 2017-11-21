@@ -4,45 +4,46 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConexaoUtil {
+import conexao.Conexao;
+
+public class ConexaoUtil implements Conexao {
 
 	private static Connection con;
 
-	static { 
+	static {
 		open();
 	}
 
-	public static void open() { 
-		String url = System.getProperty("url"); 
+	private static void open() {
+		
+		String url = System.getProperty("url");
 		String username = System.getProperty("username");
 		String password = System.getProperty("password");
 
 		try {
-			con = DriverManager.getConnection(url, username, password); 
+			con = DriverManager.getConnection(url, username, password);
 		} catch (SQLException ex) {
 			ex.printStackTrace();
 		}
 
 	}
 
-	public static Connection getCon() { 
+	public Connection get() {
 		try {
 			if (con.isClosed()) {
 				open();
 			}
-		} catch (SQLException ex) {
-			ex.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 		return con;
 	}
 
-	public static void close() {
+	public void close() {
 		try {
 			con.close();
-		} catch (SQLException ex) {
-			ex.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	}
-
 }
-

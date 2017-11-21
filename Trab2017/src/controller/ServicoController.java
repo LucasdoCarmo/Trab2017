@@ -1,23 +1,18 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 
-public class ClienteController {
+public class ServicoController {
 
     @FXML
-    private StackPane stack1;
+    private StackPane stack;
 
     @FXML
-    private BorderPane Tela2;
-
-    @FXML
-    private MenuItem miCliente;
-
-    @FXML
-    private MenuItem miFuncionario;
+    private MenuItem miPCadastro;
 
     @FXML
     private MenuItem miProduto;
@@ -26,7 +21,13 @@ public class ClienteController {
     private MenuItem miServico;
 
     @FXML
-    private MenuItem miPCadastro;
+    private MenuItem miCliente;
+
+    @FXML
+    private BorderPane bpPrincipal;
+
+    @FXML
+    private MenuItem miFuncionario;
 
     @FXML
     void onCliente(ActionEvent event) {

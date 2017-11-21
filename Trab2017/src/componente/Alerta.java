@@ -9,7 +9,7 @@ import javafx.scene.control.ButtonType;
 
 public class Alerta {
 	public boolean excluir() {
-		Alert alerta = new Alert(AlertType.CONFIRMATION, "Deseja realmente excluir?", ButtonType.CANCEL, ButtonType.OK);
+		Alert alerta = new Alert(AlertType.CONFIRMATION, "Realmente deseja excluir?", ButtonType.CANCEL, ButtonType.OK);
 
 		// Desativando o comportamento padrão.
 		Button okButton = (Button) alerta.getDialogPane().lookupButton(ButtonType.OK);
@@ -23,7 +23,7 @@ public class Alerta {
 	}
 
 	public boolean salvar() {
-		Alert alerta = new Alert(AlertType.CONFIRMATION, "Deseja realmente salvar?", ButtonType.CANCEL, ButtonType.OK);
+		Alert alerta = new Alert(AlertType.CONFIRMATION, "Realmente deseja salvar?", ButtonType.CANCEL, ButtonType.OK);
 
 		// Desativando o comportamento padrão.
 		Button okButton = (Button) alerta.getDialogPane().lookupButton(ButtonType.OK);
@@ -37,7 +37,7 @@ public class Alerta {
 	}
 
 	public boolean nulo() {
-		Alert alerta = new Alert(AlertType.WARNING, "Campos não podem ser nulos", ButtonType.OK);
+		Alert alerta = new Alert(AlertType.WARNING, "Campos não podem ser deixados nulos", ButtonType.OK);
 
 		// Desativando o comportamento padrão.
 		Button okButton = (Button) alerta.getDialogPane().lookupButton(ButtonType.OK);
@@ -50,7 +50,7 @@ public class Alerta {
 	}
 
 	public boolean incorreto() {
-		Alert alerta = new Alert(AlertType.ERROR, "Usuario ou senha incorretos", ButtonType.OK);
+		Alert alerta = new Alert(AlertType.ERROR, "Usuario ou senha inserido incorretamente", ButtonType.OK);
 
 		// Desativando o comportamento padrão.
 		Button okButton = (Button) alerta.getDialogPane().lookupButton(ButtonType.OK);
@@ -62,7 +62,7 @@ public class Alerta {
 	}
 
 	public boolean entrar() {
-		Alert alerta = new Alert(AlertType.INFORMATION, "Login correto bem vindo ao sistema", ButtonType.OK);
+		Alert alerta = new Alert(AlertType.INFORMATION, "Login e senha corretos. Bem vindo ao sistema", ButtonType.OK);
 
 		// Desativando o comportamento padrão.
 		Button okButton = (Button) alerta.getDialogPane().lookupButton(ButtonType.OK);

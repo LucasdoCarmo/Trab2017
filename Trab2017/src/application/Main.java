@@ -1,5 +1,7 @@
 package application;
 
+import java.sql.Connection;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -9,7 +11,7 @@ import lombok.Getter;
 
 public class Main extends Application {
 
-	public static final String PATH_VIEW = "/telas/";
+	public static final String PATH_VIEW = "../telas/";
 	
 	@Getter
 	private static AnchorPane rootLayout;
@@ -35,5 +37,9 @@ public class Main extends Application {
 
 	public static void main(String[] args) {
 		launch(args);
+	}
+
+	public static Stage getStage() {
+		return primaryStage;
 	}
 }

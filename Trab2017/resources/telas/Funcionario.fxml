@@ -14,20 +14,20 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClienteController">
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FuncionarioController">
    <children>
-      <StackPane prefHeight="817.0" prefWidth="897.0">
+      <StackPane fx:id="stack" prefHeight="800.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <BorderPane fx:id="bpPrincipal" prefHeight="817.0" prefWidth="897.0">
+            <BorderPane fx:id="bpPrincipal" prefHeight="800.0" prefWidth="800.0">
                <top>
                   <MenuBar BorderPane.alignment="CENTER">
                      <menus>
                         <Menu mnemonicParsing="false" text="Cadastro">
                            <items>
                               <MenuItem fx:id="miCliente" mnemonicParsing="false" onAction="#onCliente" text="Cliente" />
-                              <MenuItem fx:id="miFuncionario" mnemonicParsing="false" text="Funcionario" />
-                              <MenuItem fx:id="miProduto" mnemonicParsing="false" text="Produto" />
-                              <MenuItem fx:id="miServico" mnemonicParsing="false" text="Serviço" />
+                              <MenuItem fx:id="miFuncionario" mnemonicParsing="false" onAction="#onFuncionario" text="Funcionario" />
+                              <MenuItem fx:id="miProduto" mnemonicParsing="false" onAction="#onProduto" text="Produto" />
+                              <MenuItem fx:id="miServico" mnemonicParsing="false" onAction="#onServico" text="Serviço" />
                            </items>
                         </Menu>
                         <Menu mnemonicParsing="false" text="Pedido">

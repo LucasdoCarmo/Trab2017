@@ -11,7 +11,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 
-public class ClienteController {
+public class PedidoController {
 
     @FXML
     private StackPane stack;
@@ -34,7 +34,7 @@ public class ClienteController {
     @FXML
     private MenuItem miFuncionario;
 
-	@FXML
+    @FXML
 	void onCadastro(ActionEvent event) {
 		AbreTela("Cadastro.fxml");
 	}
@@ -73,5 +73,4 @@ public class ClienteController {
 			e.printStackTrace();
 		}
 	}
-
 }

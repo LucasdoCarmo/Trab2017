@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lombok.Getter;
-
+  
 public class Main extends Application {
 
 	public static final String PATH_VIEW = "../telas/";

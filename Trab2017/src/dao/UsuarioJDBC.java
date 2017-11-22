@@ -37,6 +37,7 @@ public class UsuarioJDBC implements UsuarioDAO {
 		}
 	}
 
+	
 	public void alterar(Usuario objeto) {
 		String update = "update usuario set Nome=? , senha=? where idUsuario =?";
 		try {

@@ -42,51 +42,17 @@ public class PrincipalController {
 
 	@FXML
 	void onCadastro(ActionEvent event) {
-		Node node2 = (Node) event.getSource();
-		Stage stage = (Stage) node2.getScene().getWindow();
-		Parent root = null;
-		try {
-			root = FXMLLoader.load(getClass().getResource("Cadastro.fxml"));
-
-		} catch (IOException ex) {
-		}
-		Scene scene = new Scene(root);
-		stage.setScene(scene);
-		stage.show();
-
+		AbreTela("Cadastro.fxml");
 	}
 
 	@FXML
 	void onCliente(ActionEvent event) {
-		Node node3 = (Node) event.getSource();
-		Stage stage = (Stage) node3.getScene().getWindow();
-		Parent root = null;
-		try {
-			if (LoginController.getStage() != null) {
-				LoginController.getStage().close();
-			}
-			root = FXMLLoader.load(getClass().getResource("Cliente.fxml"));
-
-		} catch (IOException ex) {
-		}
-		Scene scene = new Scene(root);
-		stage.setScene(scene);
-		stage.show();
+		AbreTela("Cliente.fxml");
 	}
 
 	@FXML
 	void onFuncionario(ActionEvent event) {
-		Node node = (Node) event.getSource();
-		Stage stage = (Stage) node.getScene().getWindow();
-		Parent root = null;
-		try {
-			root = FXMLLoader.load(getClass().getResource("Funcionario.fxml"));
-
-		} catch (IOException ex) {
-		}
-		Scene scene = new Scene(root);
-		stage.setScene(scene);
-		stage.show();
+		AbreTela("Funcionario.fxml");
 	}
 
 	@FXML
@@ -125,9 +91,12 @@ public class PrincipalController {
 	}
 
 	public void AbreTela(String tela) {
+		//limpa tela
 		stack.getChildren().clear();
 		try {
+			//acha a tela
 			Node no = FXMLLoader.load(getClass().getResource(Main.PATH_VIEW + tela));
+			//adiciona a tela nova
 			stack.getChildren().add(no);
 		} catch (IOException e) {
 			e.printStackTrace();

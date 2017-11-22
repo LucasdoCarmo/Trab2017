@@ -7,8 +7,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CdUsuarioController">
    <children>
       <StackPane fx:id="stack" layoutX="10.0" layoutY="10.0" prefHeight="800.0" prefWidth="800.0">
          <children>
@@ -16,21 +15,13 @@
                <center>
                   <Pane prefHeight="700.0" prefWidth="700.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TextField layoutX="220.0" layoutY="159.0" />
-                        <TextField layoutX="220.0" layoutY="197.0" />
-                        <Text layoutX="163.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Idade:" wrappingWidth="61.1337890625" />
-                        <Text layoutX="174.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" wrappingWidth="39.1337890625" />
-                        <Text layoutX="313.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" wrappingWidth="61.1337890625" />
-                        <TextField layoutX="344.0" layoutY="122.0" prefHeight="31.0" prefWidth="66.0" />
-                        <Button layoutX="154.0" layoutY="362.0" mnemonicParsing="false" text="Salvar" />
-                        <Button layoutX="281.0" layoutY="362.0" mnemonicParsing="false" text="Excluir" />
-                        <Button layoutX="385.0" layoutY="362.0" mnemonicParsing="false" text="Cancelar" />
-                        <TextField layoutX="220.0" layoutY="122.0" prefHeight="31.0" prefWidth="66.0" />
-                        <Text layoutX="105.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome artistico:" wrappingWidth="116.1337890625" />
-                        <Text layoutX="126.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Real:" wrappingWidth="95.1337890625" />
-                        <TextField layoutX="220.0" layoutY="235.0" />
-                        <Text layoutX="149.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Função:" wrappingWidth="70.1337890625" />
-                        <TextField layoutX="220.0" layoutY="276.0" />
+                        <TextField fx:id="tfLogin" layoutX="220.0" layoutY="159.0" />
+                        <TextField fx:id="tfSenha" layoutX="220.0" layoutY="197.0" />
+                        <Text layoutX="162.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" wrappingWidth="44.1337890625" />
+                        <Button fx:id="btnSalvar" layoutX="146.0" layoutY="265.0" mnemonicParsing="false" onAction="#onSalvar" text="Salvar" />
+                        <Button fx:id="btnExcluir" layoutX="259.0" layoutY="265.0" mnemonicParsing="false" onAction="#onExcluir" text="Excluir" />
+                        <Button fx:id="Cancelar" layoutX="368.0" layoutY="265.0" mnemonicParsing="false" onAction="#onCancelar" text="Cancelar" />
+                        <Text layoutX="159.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" wrappingWidth="69.1337890625" />
                      </children>
                   </Pane>
                </center>
@@ -50,9 +41,9 @@
                               <MenuItem fx:id="miPCadastro" mnemonicParsing="false" text="Cadastro" />
                            </items>
                         </Menu>
-                        <Menu mnemonicParsing="false" text="Help">
+                        <Menu mnemonicParsing="false" text="Usuario">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="About" />
+                              <MenuItem mnemonicParsing="false" text="Cadastro" />
                            </items>
                         </Menu>
                      </menus>

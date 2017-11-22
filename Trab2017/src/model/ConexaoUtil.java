@@ -46,4 +46,19 @@ public class ConexaoUtil implements Conexao {
 			e.printStackTrace();
 		}
 	}
+
+
+
+	public static Connection getCon() {
+		return con;
+	}
+
+	public static void setCon(Connection con) {
+		ConexaoUtil.con = con;
+	}
+
+	public ConexaoUtil() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 }
